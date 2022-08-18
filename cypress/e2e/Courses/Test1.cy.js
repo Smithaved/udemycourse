@@ -11,7 +11,7 @@ describe("Testing Courses",()=>{
             const textVeg=$e1.find(".product-name").text()
             if(textVeg.includes('Cashews'))
             {
-                $e1.find("button").click()
+                cy.wrap($e1).find("button").click()
             }
         })
         cy.get(".brand").then(function(logo){
