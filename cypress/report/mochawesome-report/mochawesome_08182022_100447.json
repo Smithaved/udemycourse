@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-18T04:34:23.992Z",
+    "end": "2022-08-18T04:34:47.914Z",
+    "duration": 23922,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "111ad345-39ee-43e4-98b8-8a61ce2bbd1b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Courses\\Test14.cy.js",
+      "file": "cypress\\e2e\\Courses\\Test14.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1cb36970-045b-407f-8810-6c2d1d4cf059",
+          "title": "Generic methods",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test14",
+              "fullTitle": "Generic methods Test14",
+              "timedOut": null,
+              "duration": 19218,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('courseurl'));\nhomepage.getShop().click();\nproductname.forEach(element => {\n  cy.selectProduct(element);\n});\nproductpage.getCheckoutButton().click();\nvar sum = 0;\nproductpage.getPrice().each(($el, index, $list) => {\n  const amount = $el.text();\n  var res = amount.split(\" \");\n  res = res[1].trim();\n  sum = Number(sum) + Number(res);\n});\nproductpage.getTotalAmount().then(function (element) {\n  const totalPrice = element.text();\n  var total = totalPrice.split(\" \");\n  total = total[1].trim();\n  expect(sum).to.equal(Number(total));\n});\nproductpage.getCheckOutBtn().click();\nproductpage.getLocationTxtBox().type('India');\nproductpage.getSuggestionAnchor().click();\nproductpage.getCheckBox().click();\nproductpage.getPurchaceButton().click();\nproductpage.getAlertMsg().then(function (element) {\n  const actualText = element.text();\n  expect(actualText.includes(\"Success! Thank you! Your order will be delivered in next few weeks :-).\")).to.be.true;\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 8050ms: `cy.click()` failed because this element:\n\n`<div class=\"checkbox checkbox-primary\">...</div>`\n\nis being covered by another element:\n\n`<a>India</a>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 8050ms: `cy.click()` failed because this element:\n\n`<div class=\"checkbox checkbox-primary\">...</div>`\n\nis being covered by another element:\n\n`<a>India</a>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:157751:78)\n    at ensureDescendents (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:143172:8)\n    at ensureDescendentsAndScroll (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:143179:14)\n    at ensureElIsNotCovered (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:143311:5)\n    at runAllChecks (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:143501:52)\n    at retryActionability (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:143525:16)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8592:29)\n    at whenStable (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:162678:65)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:162132:14\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9435:18)\n    at Promise._fulfill (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:9379:18)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10993:46\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\e2e\\Courses\\Test14.cy.js:154:31)",
+                "diff": null
+              },
+              "uuid": "ccdd20a6-7872-4620-bec5-d84acc2f6eb5",
+              "parentUUID": "1cb36970-045b-407f-8810-6c2d1d4cf059",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ccdd20a6-7872-4620-bec5-d84acc2f6eb5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19218,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

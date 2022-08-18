@@ -1,0 +1,10 @@
+describe("ChildTab",()=>{
+    it("Test8",()=>{
+        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+        cy.get("#opentab").invoke('removeAttr','target').click()
+        cy.url().should('include','rahulshettyacademy.com')
+        cy.go('back')
+        cy.url().should('include','AutomationPractice')
+        cy.go('forward')
+    })
+})

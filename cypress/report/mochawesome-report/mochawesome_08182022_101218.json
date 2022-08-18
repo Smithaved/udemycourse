@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-18T04:42:06.691Z",
+    "end": "2022-08-18T04:42:18.175Z",
+    "duration": 11484,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88df5c6b-2e20-4b03-95cd-43d01695e5ca",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Courses\\Test8.cy.js",
+      "file": "cypress\\e2e\\Courses\\Test8.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ede31b5-e19e-4441-b545-6fcca27ebe19",
+          "title": "ChildTab",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test8",
+              "fullTitle": "ChildTab Test8",
+              "timedOut": null,
+              "duration": 9727,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\ncy.get(\"#opentab\").invoke('removeAttr', 'target').click();\ncy.url().should('include', 'rahulshettyacademy.com');\ncy.go('back');\ncy.url().should('include', 'AutomationPractice');\ncy.go('forward');",
+              "err": {},
+              "uuid": "ba8707da-6d21-454d-bed6-a6000a707933",
+              "parentUUID": "9ede31b5-e19e-4441-b545-6fcca27ebe19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba8707da-6d21-454d-bed6-a6000a707933"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9727,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

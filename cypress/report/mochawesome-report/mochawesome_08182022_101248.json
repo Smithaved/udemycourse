@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-18T04:42:47.610Z",
+    "end": "2022-08-18T04:42:48.030Z",
+    "duration": 420,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7f54776-4c7f-417d-8c0b-b4deb75cd3e4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\bookMyShow1.cy.js",
+      "file": "cypress\\e2e\\bookMyShow1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38f36862-409f-4d86-a81a-2f0ddbc1385e",
+          "title": "BookMyShow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Gallipata2",
+              "fullTitle": "BookMyShow Gallipata2",
+              "timedOut": null,
+              "duration": 295,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('commonData').then(function (data) {\n  cy.visit(data.baseUrl);\n});\ncy.title().should('include', \"BookMyShow\");\nconst homePage = new _home.default();\nhomePage.selectCity();\nhomePage.recomandedMovies();\nhomePage.clickOnMovie(movieName);\nconst movieDetails = new _movieDetail.default();\nmovieDetails.bookTicketButton();\nconst timeSlotPage = new _timeSlot.default();\ntimeSlotPage.popup();\ntimeSlotPage.selectTimeSlot();\ntimeSlotPage.tearmsAndConditions();\ntimeSlotPage.numberOfSeats();",
+              "err": {
+                "message": "CypressError: `cy.task('parseXlsx')` failed with the following error:\n\n> ENOENT: no such file or directory, open 'C:/Users/Vinay/Desktop/BookMyShow/cypress/fixtures/TestData.xlsx'\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `BookMyShow`",
+                "estack": "CypressError: `cy.task('parseXlsx')` failed with the following error:\n\n> ENOENT: no such file or directory, open 'C:/Users/Vinay/Desktop/BookMyShow/cypress/fixtures/TestData.xlsx'\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `BookMyShow`\n    at http://localhost:61428/__cypress/runner/cypress_runner.js:155905:78\n    at tryCatcher (http://localhost:61428/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:61428/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:61428/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:61428/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:61428/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:61428/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:61428/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:61428/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:61428/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61428/__cypress/tests?p=cypress\\support\\e2e.js:201:13)\n\nFrom Node.js Internals:\n  Error: ENOENT: no such file or directory, open 'C:/Users/Vinay/Desktop/BookMyShow/cypress/fixtures/TestData.xlsx'\n      at Object.openSync (node:fs:585:3)\n      at Object.readFileSync (node:fs:453:35)\n      at C:\\Users\\Vinay\\Desktop\\Cypress\\cypress.config.js:19:44\n  at new Promise (<anonymous>)\n      at parseXlsx (C:\\Users\\Vinay\\Desktop\\Cypress\\cypress.config.js:17:18)\n      at invoke (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\child\\run_plugins.js:234:16)\n      at C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\util.js:59:14\n      at tryCatcher (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n      at Function.Promise.attempt.Promise.try (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\node_modules\\bluebird\\js\\release\\method.js:39:29)\n      at Object.wrapChildPromise (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\util.js:58:23)\n      at RunPlugins.taskExecute (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\child\\run_plugins.js:240:10)\n      at RunPlugins.execute (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\child\\run_plugins.js:160:21)\n      at EventEmitter.<anonymous> (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\child\\run_plugins.js:257:12)\n      at EventEmitter.emit (node:events:527:28)\n      at process.<anonymous> (C:\\Users\\Vinay\\AppData\\Local\\Cypress\\Cache\\10.6.0\\Cypress\\resources\\app\\node_modules\\@packages\\server\\lib\\plugins\\util.js:33:22)\n      at process.emit (node:events:527:28)\n      at emit (node:internal/child_process:938:14)\n      at processTicksAndRejections (node:internal/process/task_queues:84:21)",
+                "diff": null
+              },
+              "uuid": "830fd410-8ddd-43ff-9361-257ed64cc9cd",
+              "parentUUID": "38f36862-409f-4d86-a81a-2f0ddbc1385e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "830fd410-8ddd-43ff-9361-257ed64cc9cd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 295,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
